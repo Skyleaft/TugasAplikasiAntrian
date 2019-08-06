@@ -33,7 +33,7 @@ namespace Aplikasi_Antrian
             
         }
 
-        private async void panggil(int loket)
+        private async void panggil(int loket) //pilih ke loket 1/2
         {
             string nopanggil;
             //deklarasi playlist
@@ -84,7 +84,7 @@ namespace Aplikasi_Antrian
                         {
                             if (i == 3)
                             {
-                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\11.wav");
+                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\11.wav");//panggil suara sebelas
                                 i = nopanggil.Length;
                             }
                             else
@@ -94,7 +94,7 @@ namespace Aplikasi_Antrian
                         }
                         else
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");//panggil suara angka satuan 1,2,3,4
                         }
 
                     }
@@ -218,7 +218,6 @@ namespace Aplikasi_Antrian
 
                 //play semua suara nya dari playlist
                 var playr = new playr(playlist);
-
                 playr.PlaySong();
 
                 //kasih delay biar ga terus terusan
@@ -249,72 +248,80 @@ namespace Aplikasi_Antrian
         private int urut=1;
         private void antri(char tipe) //tipe P buat personal - B Bisnis
         {
-            if (tipe == 'P')
+            if(urut < 1000) //maksimal antrian <1000
             {
-                string baru;
-                if (heap.IsEmpty == true & urut == 1)
+                if (tipe == 'P')
                 {
-                    heap.Tambah("P001");
-                    MessageBox.Show("Nomor Antrian Anda P001");
-                }
-                else
-                {
-                    urut++;
-                    if (urut < 10)
+                    string baru;
+                    if (heap.IsEmpty == true & urut == 1)
                     {
-                        baru = "P00" + urut;
-                    }
-                    else if (urut < 100)
-                    {
-                        baru = "P0" + urut;
+                        heap.Tambah("P001");//masukin ke heap
+                        MessageBox.Show("Nomor Antrian Anda P001");
                     }
                     else
                     {
-                        baru = "P" + urut;
-                    }
+                        urut++; //urut +1
+                        if (urut < 10)
+                        {
+                            baru = "P00" + urut;
+                        }
+                        else if (urut < 100)
+                        {
+                            baru = "P0" + urut;
+                        }
+                        else
+                        {
+                            baru = "P" + urut;
+                        }
 
-                    heap.Tambah(baru);
-                    MessageBox.Show("Nomor Antrian Anda " + baru);
+                        heap.Tambah(baru);//masukin ke heap
+                        MessageBox.Show("Nomor Antrian Anda " + baru);
+                    }
+                }
+                else
+                {
+                    string baru;
+                    if (heap.IsEmpty == true & urut == 1)
+                    {
+                        heap.Tambah("B001");
+                        MessageBox.Show("Nomor Antrian Anda B001");
+                    }
+                    else
+                    {
+                        urut++;
+                        if (urut < 10)
+                        {
+                            baru = "B00" + urut;
+                        }
+                        else if (urut < 100)
+                        {
+                            baru = "B0" + urut;
+                        }
+                        else
+                        {
+                            baru = "B" + urut;
+                        }
+
+                        heap.Tambah(baru);
+                        MessageBox.Show("Nomor Antrian Anda " + baru);
+                    }
                 }
             }
             else
             {
-                string baru;
-                if (heap.IsEmpty == true & urut == 1)
-                {
-                    heap.Tambah("B001");
-                    MessageBox.Show("Nomor Antrian Anda B001");
-                }
-                else
-                {
-                    urut++;
-                    if (urut < 10)
-                    {
-                        baru = "B00" + urut;
-                    }
-                    else if (urut < 100)
-                    {
-                        baru = "B0" + urut;
-                    }
-                    else
-                    {
-                        baru = "B" + urut;
-                    }
-
-                    heap.Tambah(baru);
-                    MessageBox.Show("Nomor Antrian Anda " + baru);
-                }
+                MessageBox.Show("Antrian Penuh");
             }
+            
         }
         private void Btn_personal_Click(object sender, RoutedEventArgs e)
         {
-            antri('P');
+            antri('P');//antri personal
             
         }
 
         private void Btn_bisnis_Click(object sender, RoutedEventArgs e)
         {
-            antri('B');
+            antri('B');//antri bisnis
         }
 
         private void Btn_close_Click(object sender, RoutedEventArgs e)
@@ -338,92 +345,125 @@ namespace Aplikasi_Antrian
         //Tambahan
         private void Btn_plus10_Click(object sender, RoutedEventArgs e)
         {
-            string baru;
-            if (heap.IsEmpty == true & urut == 1)
+            if (urut < 1000)
             {
-                urut = urut + 10;
-                heap.Tambah("P010");
-                MessageBox.Show("Nomor Antrian Anda P010");
-            }
-            else
-            {
-                urut=urut+10;
-                if (urut < 10)
+                string baru;
+                if (heap.IsEmpty == true & urut == 1)
                 {
-                    baru = "P00" + urut;
-                }
-                else if (urut < 100)
-                {
-                    baru = "P0" + urut;
+                    urut = urut + 10;
+                    heap.Tambah("P010");
+                    MessageBox.Show("Nomor Antrian Anda P010");
                 }
                 else
                 {
-                    baru = "P" + urut;
-                }
+                    urut=urut+10;
+                    if (urut < 10)
+                    {
+                        baru = "P00" + urut;
+                    }
+                    else if (urut < 100)
+                    {
+                        baru = "P0" + urut;
+                    }
+                    else
+                    {
+                        baru = "P" + urut;
+                    }
 
-                heap.Tambah(baru);
-                MessageBox.Show("Nomor Antrian Anda " + baru);
+                    heap.Tambah(baru);
+                    MessageBox.Show("Nomor Antrian Anda " + baru);
+                }
             }
+            else
+            {
+                MessageBox.Show("Antrian Penuh");
+            }
+            
         }
 
         private void Btn_plus20_Click(object sender, RoutedEventArgs e)
         {
-            string baru;
-            if (heap.IsEmpty == true & urut == 1)
+            if (urut < 1000)
             {
-                urut = urut + 20;
-                heap.Tambah("P020");
-                MessageBox.Show("Nomor Antrian Anda P020");
-            }
-            else
-            {
-                urut = urut + 20;
-                if (urut < 10)
+                string baru;
+                if (heap.IsEmpty == true & urut == 1)
                 {
-                    baru = "P00" + urut;
-                }
-                else if (urut < 100)
-                {
-                    baru = "P0" + urut;
+                    urut = urut + 20;
+                    heap.Tambah("P020");
+                    MessageBox.Show("Nomor Antrian Anda P020");
                 }
                 else
                 {
-                    baru = "P" + urut;
-                }
+                    urut = urut + 20;
+                    if (urut < 10)
+                    {
+                        baru = "P00" + urut;
+                    }
+                    else if (urut < 100)
+                    {
+                        baru = "P0" + urut;
+                    }
+                    else
+                    {
+                        baru = "P" + urut;
+                    }
 
-                heap.Tambah(baru);
-                MessageBox.Show("Nomor Antrian Anda " + baru);
+                    heap.Tambah(baru);
+                    MessageBox.Show("Nomor Antrian Anda " + baru);
+                }
             }
+            else
+            {
+                MessageBox.Show("Antrian Penuh");
+            }
+            
         }
 
         private void Btn_plus50_Click(object sender, RoutedEventArgs e)
         {
-            string baru;
-            if (heap.IsEmpty == true & urut == 1)
+            if (urut < 1000)
             {
-                urut = urut + 50;
-                heap.Tambah("P050");
-                MessageBox.Show("Nomor Antrian Anda P050");
-            }
-            else
-            {
-                urut = urut + 50;
-                if (urut < 10)
+                string baru;
+                if (heap.IsEmpty == true & urut == 1)
                 {
-                    baru = "P00" + urut;
-                }
-                else if (urut < 100)
-                {
-                    baru = "P0" + urut;
+                    urut = urut + 50;
+                    heap.Tambah("P050");
+                    MessageBox.Show("Nomor Antrian Anda P050");
                 }
                 else
                 {
-                    baru = "P" + urut;
-                }
+                    urut = urut + 50;
+                    if (urut < 10)
+                    {
+                        baru = "P00" + urut;
+                    }
+                    else if (urut < 100)
+                    {
+                        baru = "P0" + urut;
+                    }
+                    else
+                    {
+                        baru = "P" + urut;
+                    }
 
-                heap.Tambah(baru);
-                MessageBox.Show("Nomor Antrian Anda " + baru);
+                    heap.Tambah(baru);
+                    MessageBox.Show("Nomor Antrian Anda " + baru);
+                }
             }
+            else
+            {
+                MessageBox.Show("Antrian Penuh");
+            }
+            
+        }
+
+        private void Btn_tentang_Click(object sender, RoutedEventArgs e)
+        {
+            WindowTentang wt = new WindowTentang();
+            btn_closenav.Command.Execute(null);
+            wt.Show();
+            
+
         }
     }
 }

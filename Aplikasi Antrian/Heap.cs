@@ -8,7 +8,7 @@ namespace Aplikasi_Antrian
 {
     public class Heap<T> where T : IComparable
     {
-        //data nya masukin ke list
+        //data nya dimasukin ke list
         private List<T> elements = new List<T>();
 
         //buat dapetin jumlah data
@@ -21,28 +21,28 @@ namespace Aplikasi_Antrian
         {
             return this.elements.Count > 0 ? this.elements[0] : default(T);
         }
-        public bool IsEmpty { get { return elements.Count == 0; } }
+        public bool IsEmpty { get { return elements.Count == 0; } } //kalo heap nya kosong
 
-        public void Tambah(T item)
+        public void Tambah(T item)  //method buat masukin ke heap
         {
             elements.Add(item);
             this.HeapifyUp(elements.Count - 1);
         }
 
-        //ambil data
+        //ambil data dari min heap
         public T Ambil()
         {
             if (elements.Count > 0)
             {
-                T item = elements[0];
-                elements[0] = elements[elements.Count - 1];
+                T item = elements[0]; 
+                elements[0] = elements[elements.Count - 1]; 
                 elements.RemoveAt(elements.Count - 1);
 
                 this.HeapifyDown(0);
                 return item;
             }
 
-            throw new InvalidOperationException("no element in heap");
+            throw new InvalidOperationException("Element Heap Kosong");
         }
 
         //heapifyUp == ShiftUp
@@ -64,18 +64,18 @@ namespace Aplikasi_Antrian
         {
             var terkecil = index;
 
-            var left = this.GetLeft(index);
-            var right = this.GetRight(index);
+            var kiri = this.GetKiri(index);
+            var kanan = this.GetKanan(index);
 
-            //membandingkan data mana yang lebih kecil dari left dan elemen/data nya lebih kecil
-            if (left < this.GetSize() && elements[left].CompareTo(elements[index]) < 0)
+            //membandingkan data mana yang lebih kecil dari kiri dan elemen/data nya lebih kecil
+            if (kiri < this.GetSize() && elements[kiri].CompareTo(elements[index]) < 0)
             {
-                terkecil = left;
+                terkecil = kiri;
             }
 
-            if (right < this.GetSize() && elements[right].CompareTo(elements[terkecil]) < 0)
+            if (kanan < this.GetSize() && elements[kanan].CompareTo(elements[terkecil]) < 0)
             {
-                terkecil = right;
+                terkecil = kanan;
             }
 
             if (terkecil != index)
@@ -99,12 +99,12 @@ namespace Aplikasi_Antrian
             return (index - 1) / 2;
         }
 
-        private int GetLeft(int index)
+        private int GetKiri(int index)
         {
             return 2 * index + 1;
         }
 
-        private int GetRight(int index)
+        private int GetKanan(int index)
         {
             return 2 * index + 2;
         }

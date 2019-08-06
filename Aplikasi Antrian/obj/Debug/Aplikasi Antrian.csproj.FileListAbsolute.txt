@@ -32,3 +32,5 @@ F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDe
 F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignThemes.Wpf.pdb
 F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignThemes.Wpf.xml
 F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\App.baml
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\WindowTentang.g.cs
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\WindowTentang.baml

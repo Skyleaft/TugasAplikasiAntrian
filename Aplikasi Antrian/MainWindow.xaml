@@ -8,7 +8,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
+    Width="830"
     Height="450"
     AllowsTransparency="True"
     Background="{x:Null}"
@@ -22,14 +22,14 @@
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
-    <Border
+    <materialDesign:ColorZone
+        Margin="10"
         materialDesign:ShadowAssist.ShadowDepth="Depth3"
-        Background="{DynamicResource MaterialDesignPaper}"
-        BorderBrush="Gray"
-        BorderThickness="0.3"
         CornerRadius="10"
         MouseLeftButtonDown="DragMe">
-        <materialDesign:DrawerHost Margin="0" RenderTransformOrigin="0,0">
+
+
+        <materialDesign:DrawerHost>
             <!--  isi dari menu navigasi  -->
             <materialDesign:DrawerHost.LeftDrawerContent>
                 <StackPanel Width="220" Margin="16">
@@ -75,8 +75,10 @@
                     </Button>
                     <Separator Margin="5,2" />
                     <Button
+                        x:Name="btn_tentang"
                         Margin="4"
                         HorizontalAlignment="Center"
+                        Click="Btn_tentang_Click"
                         Style="{DynamicResource MaterialDesignFlatButton}">
                         Tentang Aplikasi
                     </Button>
@@ -89,12 +91,14 @@
                     </Button>
                 </StackPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50*" />
                     <RowDefinition Height="401*" />
                 </Grid.RowDefinitions>
 
+                <!--  Header  -->
                 <DockPanel>
                     <Button
                         x:Name="btn_menu"
@@ -127,7 +131,7 @@
                         Click="Btn_close_Click"
                         DockPanel.Dock="Right"
                         Style="{StaticResource MaterialDesignFlatButton}"
-                        ToolTip="MaterialDesignFlatButton">
+                        ToolTip="Keluar Aplikasi">
                         <iconPacks:PackIconMaterial Kind="Close" />
                     </Button>
                 </DockPanel>
@@ -284,6 +288,6 @@
 
             </Grid>
         </materialDesign:DrawerHost>
-    </Border>
+    </materialDesign:ColorZone>
 
 </Window>
