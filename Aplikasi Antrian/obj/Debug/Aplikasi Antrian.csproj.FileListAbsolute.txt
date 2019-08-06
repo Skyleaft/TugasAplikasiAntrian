@@ -1,0 +1,34 @@
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\Aplikasi Antrian.exe.config
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\Aplikasi Antrian.exe
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\Aplikasi Antrian.pdb
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.csprojAssemblyReference.cache
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Interop.MediaPlayer.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Interop.WMPLib.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.csproj.ResolveComReference.cache
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\MainWindow.g.cs
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\App.g.cs
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian_Content.g.cs
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian_MarkupCompile.cache
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian_MarkupCompile.lref
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\MainWindow.baml
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.g.resources
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi_Antrian.Properties.Resources.resources
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.csproj.GenerateResource.cache
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.csproj.CoreCompileInputs.cache
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.exe
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.pdb
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\NAudio.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\NAudio.xml
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\Aplikasi Antrian.csproj.CopyComplete
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\ControlzEx.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MahApps.Metro.IconPacks.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignColors.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\System.Windows.Interactivity.dll
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\ControlzEx.pdb
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MahApps.Metro.IconPacks.pdb
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MahApps.Metro.IconPacks.xml
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignColors.pdb
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Repository\WPF Project\Aplikasi Antrian\Aplikasi Antrian\obj\Debug\App.baml
