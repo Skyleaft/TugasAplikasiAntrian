@@ -152,27 +152,28 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Suara\0.wav" />
-    <Content Include="Suara\1.wav" />
-    <Content Include="Suara\10.wav" />
-    <Content Include="Suara\11.wav" />
-    <Content Include="Suara\2.wav" />
-    <Content Include="Suara\3.wav" />
-    <Content Include="Suara\4.wav" />
-    <Content Include="Suara\5.wav" />
-    <Content Include="Suara\6.wav" />
-    <Content Include="Suara\7.wav" />
-    <Content Include="Suara\8.wav" />
-    <Content Include="Suara\9.wav" />
-    <Content Include="Suara\B.wav" />
+    <Content Include="Suara\0.mp3" />
+    <Content Include="Suara\1.mp3" />
+    <Content Include="Suara\10.mp3" />
+    <Content Include="Suara\11.mp3" />
+    <Content Include="Suara\2.mp3" />
+    <Content Include="Suara\3.mp3" />
+    <Content Include="Suara\4.mp3" />
+    <Content Include="Suara\5.mp3" />
+    <Content Include="Suara\6.mp3" />
+    <Content Include="Suara\7.mp3" />
+    <Content Include="Suara\8.mp3" />
+    <Content Include="Suara\9.mp3" />
+    <Content Include="Suara\B.mp3" />
     <Content Include="Suara\belas.mp3" />
     <Content Include="Suara\ke loket.mp3" />
-    <Content Include="Suara\Nomor Antrian.wav" />
-    <Content Include="Suara\P.wav" />
+    <Content Include="Suara\nomor antrian.mp3" />
+    <Content Include="Suara\P.mp3" />
     <Content Include="Suara\puluh.mp3" />
     <Content Include="Suara\ratus.mp3" />
-    <Content Include="Suara\seratus.wav" />
+    <Content Include="Suara\seratus.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

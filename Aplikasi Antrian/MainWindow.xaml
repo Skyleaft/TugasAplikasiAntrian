@@ -195,92 +195,118 @@
 
                     </StackPanel>
                     <!--  Panel Kanan  -->
-                    <StackPanel Margin="0,20,0,0" Orientation="Horizontal">
-                        <materialDesign:Card Width="230" Margin="10">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="130" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <TextBlock
-                                    x:Name="txt_loket1"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Style="{StaticResource MaterialDesignDisplay3TextBlock}">
-                                    ....
-                                </TextBlock>
-
-
-                                <StackPanel Grid.Row="1" Margin="8,5,8,10">
-                                    <Separator
-                                        Height="16"
-                                        MinHeight="2"
-                                        Margin="8,0,8,0"
-                                        Style="{StaticResource MaterialDesignDarkSeparator}" />
-                                    <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadlineTextBlock}">
-                                        Loket 1
+                    <StackPanel Margin="0,20,0,0" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:Card Width="230" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock
+                                        x:Name="txt_loket1"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Style="{StaticResource MaterialDesignDisplay3TextBlock}">
+                                        ....
                                     </TextBlock>
 
 
-                                </StackPanel>
-                                <Button
-                                    x:Name="btn_panggil"
-                                    Grid.Row="2"
-                                    Width="120"
-                                    Height="45"
-                                    Margin="0,5,0,0"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    Click="Btn_panggil_Click"
-                                    Content="Panggil"
-                                    RenderTransformOrigin="0.5,0.5"
-                                    Style="{StaticResource MaterialDesignRaisedButton}"
-                                    ToolTip="Panggil Nomor Antrian" />
-                            </Grid>
-                        </materialDesign:Card>
-
-                        <materialDesign:Card Width="230" Margin="5,10,10,10">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="130" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <TextBlock
-                                    x:Name="txt_loket2"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Style="{StaticResource MaterialDesignDisplay3TextBlock}">
-                                    ....
-                                </TextBlock>
+                                    <StackPanel Grid.Row="1" Margin="8,5,8,10">
+                                        <Separator
+                                            Height="16"
+                                            MinHeight="2"
+                                            Margin="8,0,8,0"
+                                            Style="{StaticResource MaterialDesignDarkSeparator}" />
+                                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                                            Loket 1
+                                        </TextBlock>
 
 
-                                <StackPanel Grid.Row="1" Margin="8,5,8,10">
-                                    <Separator
-                                        Height="16"
-                                        MinHeight="2"
-                                        Margin="8,0,8,0"
-                                        Style="{StaticResource MaterialDesignDarkSeparator}" />
-                                    <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadlineTextBlock}">
-                                        Loket 2
+                                    </StackPanel>
+                                    <Button
+                                        x:Name="btn_panggil"
+                                        Grid.Row="2"
+                                        Width="120"
+                                        Height="45"
+                                        Margin="0,5,0,0"
+                                        materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                                        Click="Btn_panggil_Click"
+                                        Content="Panggil"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Style="{StaticResource MaterialDesignRaisedButton}"
+                                        ToolTip="Panggil Nomor Antrian" />
+                                </Grid>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card Width="230" Margin="5,10,10,10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock
+                                        x:Name="txt_loket2"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Style="{StaticResource MaterialDesignDisplay3TextBlock}">
+                                        ....
                                     </TextBlock>
 
 
+                                    <StackPanel Grid.Row="1" Margin="8,5,8,10">
+                                        <Separator
+                                            Height="16"
+                                            MinHeight="2"
+                                            Margin="8,0,8,0"
+                                            Style="{StaticResource MaterialDesignDarkSeparator}" />
+                                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignHeadlineTextBlock}">
+                                            Loket 2
+                                        </TextBlock>
+
+
+                                    </StackPanel>
+                                    <Button
+                                        x:Name="btn_panggil2"
+                                        Grid.Row="2"
+                                        Width="120"
+                                        Height="45"
+                                        Margin="0,5,0,0"
+                                        materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                                        Click="Btn_panggil2_Click"
+                                        Content="Panggil"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Style="{StaticResource MaterialDesignRaisedButton}"
+                                        ToolTip="Panggil Nomor Antrian" />
+                                </Grid>
+                            </materialDesign:Card>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <materialDesign:Card Margin="10" VerticalAlignment="Stretch">
+                                <StackPanel
+                                    Margin="10,0"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="0,0,20,0"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        FontSize="16">
+                                        Nomor Antrian Selanjutnya :
+                                    </TextBlock>
+                                    <TextBlock
+                                        x:Name="txt_selanjutnya"
+                                        FontSize="40"
+                                        Style="{StaticResource MaterialDesignDisplay3TextBlock}">
+                                        ....
+                                    </TextBlock>
                                 </StackPanel>
-                                <Button
-                                    x:Name="btn_panggil2"
-                                    Grid.Row="2"
-                                    Width="120"
-                                    Height="45"
-                                    Margin="0,5,0,0"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    Click="Btn_panggil2_Click"
-                                    Content="Panggil"
-                                    RenderTransformOrigin="0.5,0.5"
-                                    Style="{StaticResource MaterialDesignRaisedButton}"
-                                    ToolTip="Panggil Nomor Antrian" />
-                            </Grid>
-                        </materialDesign:Card>
+                            </materialDesign:Card>
+                        </StackPanel>
+
                     </StackPanel>
 
                 </StackPanel>

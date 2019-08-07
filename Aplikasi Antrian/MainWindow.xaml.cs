@@ -58,7 +58,7 @@ namespace Aplikasi_Antrian
                 int angka = Convert.ToInt32(nopanggil.Substring(1));
 
                 //masukin ke playlist suara NOMOR ANTRIAN
-                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\Nomor Antrian.wav");
+                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\Nomor Antrian.mp3");
 
                 //looping dari char dari loket
                 for (int i = 1; i <= nopanggil.Length; i++)
@@ -71,12 +71,12 @@ namespace Aplikasi_Antrian
                         {
                             if (i == 3) //ini bakal berenti pas udah bilang P0
                             {
-                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\10.wav");  //panggil suara sepuluh
+                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\10.mp3");  //panggil suara sepuluh
                                 i = nopanggil.Length; //berentiin looping nya
                             }
                             else
                             {
-                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav"); //panggil suara P0
+                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3"); //panggil suara P0
                             }
 
                         }
@@ -84,17 +84,17 @@ namespace Aplikasi_Antrian
                         {
                             if (i == 3)
                             {
-                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\11.wav");//panggil suara sebelas
+                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\11.mp3");//panggil suara sebelas
                                 i = nopanggil.Length;
                             }
                             else
                             {
-                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");
+                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3");
                             }
                         }
                         else
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");//panggil suara angka satuan 1,2,3,4
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3");//panggil suara angka satuan 1,2,3,4
                         }
 
                     }
@@ -103,13 +103,13 @@ namespace Aplikasi_Antrian
                     {
                         if (i == 3)
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka - 10) + ".wav"); //manggil angka satuan
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka - 10) + ".mp3"); //manggil angka satuan
                             playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\belas.mp3"); //suara belas
                             i = nopanggil.Length;
                         }
                         else //buat manggil p0
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3");
                         }
                     }
                     //puluhan
@@ -117,18 +117,18 @@ namespace Aplikasi_Antrian
                     {
                         if (i == 3)
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka / 10) + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka / 10) + ".mp3");
                             playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\puluh.mp3");
                             if (angka % 10 != 0) //ini bakal berenti nyebutin di 20 30 40 dst...  
                             {
                                 //panggil angka satuan nya dari sisa hasil bagi angka
-                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka % 10) + ".wav");
+                                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka % 10) + ".mp3");
                             }
                             i = nopanggil.Length;
                         }
                         else //buat manggil p0
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3");
                         }
                     }
                     //seratusan
@@ -136,29 +136,29 @@ namespace Aplikasi_Antrian
                     {
                         if (i == 2)
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\seratus.wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\seratus.mp3");
                             if (angka % 100 != 0)
                             {
                                 //panggil angka satuan nya dari sisa hasil bagi angka
                                 if (angka - 100 < 12)
                                 {
-                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka - 100) + ".wav");
+                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka - 100) + ".mp3");
                                 }
                                 else if (angka - 100 < 20)
                                 {
-                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka - 110) + ".wav"); //manggil angka satuan
+                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka - 110) + ".mp3"); //manggil angka satuan
 
                                     playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\belas.mp3"); //suara belas
 
                                 }
                                 else if (angka - 100 < 100)
                                 {
-                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka - 100) / 10) + ".wav");
+                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka - 100) / 10) + ".mp3");
                                     playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\puluh.mp3");
                                     if (angka % 10 != 0) //ini bakal berenti nyebutin di 20 30 40 dst...  
                                     {
                                         //panggil angka satuan nya dari sisa hasil bagi angka
-                                        playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka - 100) % 10) + ".wav");
+                                        playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka - 100) % 10) + ".mp3");
                                     }
                                 }
 
@@ -167,7 +167,7 @@ namespace Aplikasi_Antrian
                         }
                         else //buat manggil p0
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3");
                         }
                     }
                     else if (angka < 1000)
@@ -175,28 +175,28 @@ namespace Aplikasi_Antrian
                         if (i == 2)
                         {
 
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka / 100) % 10) + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka / 100) % 10) + ".mp3");
                             playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\ratus.mp3");
                             if (angka % 100 != 0)
                             {
                                 if (angka % 100 < 12)
                                 {
                                     //txt_loket2.Text = Convert.ToString(angka % 100);
-                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka % 100) + ".wav");
+                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + (angka % 100) + ".mp3");
                                 }
                                 else if (angka % 100 < 20)
                                 {
-                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka % 100) - 10) + ".wav"); //manggil angka satuan
+                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka % 100) - 10) + ".mp3"); //manggil angka satuan
                                     playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\belas.mp3"); //suara belas
                                 }
                                 else if (angka % 100 < 100)
                                 {
-                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka % 100) / 10) + ".wav");
+                                    playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka % 100) / 10) + ".mp3");
                                     playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\puluh.mp3");
                                     if ((angka % 100) % 10 != 0)
                                     {
                                         //panggil angka satuan nya dari sisa hasil bagi angka
-                                        playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka % 100) % 10) + ".wav");
+                                        playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + ((angka % 100) % 10) + ".mp3");
                                     }
 
                                 }
@@ -207,14 +207,14 @@ namespace Aplikasi_Antrian
                         }
                         else //buat manggil p0
                         {
-                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".wav");
+                            playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\" + nopanggil[i - 1] + ".mp3");
                         }
                     }
 
                 }
                 //suara ke loket
                 playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\ke loket.mp3");
-                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\"+loket+".wav");
+                playlist.Add(AppDomain.CurrentDomain.BaseDirectory + @"..\..\Suara\"+loket+".mp3");
 
                 //play semua suara nya dari playlist
                 var playr = new playr(playlist);
@@ -237,11 +237,28 @@ namespace Aplikasi_Antrian
         private async void Btn_panggil_Click(object sender, RoutedEventArgs e)
         {
             panggil(1);
+            if (heap.IsEmpty != true)
+            {
+                txt_selanjutnya.Text = heap.GetMin().ToString();
+            }
+            else
+            {
+                txt_selanjutnya.Text = "....";
+            }
 
         }
         private async void Btn_panggil2_Click(object sender, RoutedEventArgs e)
         {
             panggil(2);
+            if (heap.IsEmpty != true)
+            {
+                txt_selanjutnya.Text = heap.GetMin().ToString();
+            }
+            else
+            {
+                txt_selanjutnya.Text = "....";
+            }
+
         }
 
         //method buat masukin ke heap
@@ -316,12 +333,21 @@ namespace Aplikasi_Antrian
         private void Btn_personal_Click(object sender, RoutedEventArgs e)
         {
             antri('P');//antri personal
-            
+
+            if (heap.IsEmpty != true)
+            {
+                txt_selanjutnya.Text = heap.GetMin().ToString();
+            }
+
         }
 
         private void Btn_bisnis_Click(object sender, RoutedEventArgs e)
         {
             antri('B');//antri bisnis
+            if (heap.IsEmpty != true)
+            {
+                txt_selanjutnya.Text = heap.GetMin().ToString();
+            }
         }
 
         private void Btn_close_Click(object sender, RoutedEventArgs e)
@@ -372,6 +398,10 @@ namespace Aplikasi_Antrian
 
                     heap.Tambah(baru);
                     MessageBox.Show("Nomor Antrian Anda " + baru);
+                    if (heap.IsEmpty != true)
+                    {
+                        txt_selanjutnya.Text = heap.GetMin().ToString();
+                    }
                 }
             }
             else
@@ -410,6 +440,10 @@ namespace Aplikasi_Antrian
 
                     heap.Tambah(baru);
                     MessageBox.Show("Nomor Antrian Anda " + baru);
+                    if (heap.IsEmpty != true)
+                    {
+                        txt_selanjutnya.Text = heap.GetMin().ToString();
+                    }
                 }
             }
             else
@@ -448,6 +482,10 @@ namespace Aplikasi_Antrian
 
                     heap.Tambah(baru);
                     MessageBox.Show("Nomor Antrian Anda " + baru);
+                    if (heap.IsEmpty != true)
+                    {
+                        txt_selanjutnya.Text = heap.GetMin().ToString();
+                    }
                 }
             }
             else
